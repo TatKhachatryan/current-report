@@ -12,10 +12,7 @@ from plotly.subplots import make_subplots
 colorScheme = ['#012A4A', '#013A63', '#01497C', '#014F86', '#2A6F97', '#2C7DA0', '#468FAF', '#61A5C2', '#89C2D9', '#A9D6E5']
 colorScheme2 = ['#A5BE00', '#679436', '#EBF2FA', '#427AA1', '#05668D', '#468FAF', '#61A5C2', ]
 
-col_names = ['Name of Covered Entity', 'State', 'Covered Entity Type', 'Individuals Affected', 'Breach Submission Date', 
-             'Type of Breach','Location of Breached Information', 'Business Associate Present', 'Web Description']
-data_current = pd.read_csv(r'https://github.com/TatKhachatryan/current-report/blob/main/breach_report_current.csv', names=col_names)
-data_current = data_current.tail(-1)
+data_current = pd.read_csv("https://raw.githubusercontent.com/TatKhachatryan/current-report/main/breach_report_current.csv")
 
 data_current['Breach Submission Date'] = pd.to_datetime(data_current['Breach Submission Date'])
 data_current['Breach Submission Date Monthly'] = data_current['Breach Submission Date'].dt.to_period('M')
