@@ -160,7 +160,7 @@ card3 = dbc.Card(dbc.ListGroup(
 
 app.layout = html.Div([
     
-    html.H1("Heal Security Breach Report", style={"text-align": "center"}),
+    html.H1("Heal Security Breach Current Report", style={"text-align": "center"}),
     
     html.Div([dbc.Row([
              
