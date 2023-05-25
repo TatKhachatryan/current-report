@@ -158,7 +158,7 @@ card3 = dbc.Card(dbc.ListGroup(
     ),
 )
 
-layout = html.Div([
+app.layout = html.Div([
     
     html.H1("Heal Security Breach Report", style={"text-align": "center"}),
     
